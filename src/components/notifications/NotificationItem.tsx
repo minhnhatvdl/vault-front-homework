@@ -1,8 +1,9 @@
 import { memo } from 'react';
 import { BaseNotification } from '../../types/notifications';
+import { useNotificationDetails } from '../../hooks/useNotificationDetails';
+import GradientBackground from '../common/GradientBackground';
 import NotificationIcons from './NotificationIcons';
 import NotificationContent from './NotificationContent';
-import { useNotificationDetails } from '../../hooks/useNotificationDetails';
 
 interface NotificationItemProps {
   notification: BaseNotification;
@@ -11,6 +12,7 @@ interface NotificationItemProps {
 const NotificationItem = memo(({ notification }: NotificationItemProps) => {
   const {
     cryptoCurrency,
+    cryptoColor,
     cryptoIcon,
     actionIcon,
     actionIconBackground,
@@ -21,6 +23,7 @@ const NotificationItem = memo(({ notification }: NotificationItemProps) => {
 
   return (
     <div className="border-default relative mb-3 flex gap-4 overflow-hidden rounded-2xl border bg-white p-3">
+      <GradientBackground color={cryptoColor} />
       <NotificationIcons
         cryptoIcon={cryptoIcon}
         cryptoCurrency={cryptoCurrency}
