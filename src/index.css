@@ -1,15 +1,55 @@
 @import 'tailwindcss';
 
-@import 'tailwindcss';
-
 :root {
   /* Color tokens */
+  --color-purple-light: #d4a0ff;
   --color-gray-light: #e8e8e8;
+  --color-gray-medium: #6a6a6a;
+  --color-gray-background: #f4f4f4;
+  --color-black-5: #0000000d;
 
   /* Semantic border colors */
+  --border-accent: var(--color-purple-light);
   --border-default: var(--color-gray-light);
+  --text-secondary: var(--color-gray-medium);
+  --bg-input: var(--color-black-5);
+  --bg-card: var(--color-gray-background);
+  --bg-skeleton: var(--color-black-5);
+}
+
+.border-accent {
+  border-color: var(--border-accent);
 }
 
 .border-default {
   border-color: var(--border-default);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-input {
+  background-color: var(--bg-input);
+}
+
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+.bg-skeleton {
+  background-color: var(--bg-skeleton);
+}
+
+.spinner-accent {
+  border-color: var(--border-accent);
+  border-top-color: transparent;
+}
+
+.focus\:ring-accent:focus {
+  --tw-ring-color: var(--border-accent);
+}
+
+.focus\:caret-accent:focus {
+  caret-color: var(--border-accent);
 }
