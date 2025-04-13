@@ -1,7 +1,7 @@
 import { BaseNotification } from '../types/notifications';
 
 const API_CONFIG = {
-  baseUrl: 'http://localhost:5000',
+  baseUrl: 'http://localhost:5001',
   endpoints: {
     search: '/search',
   },
