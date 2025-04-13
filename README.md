@@ -2,10 +2,6 @@
 
 ![illustration](https://i.imgur.com/AuJ6B7T.png)
 
-## Objectives
-
-Your challenge is to build a simple and intuitive interface for searching through a list of notifications.
-
 ### Figma Design
 
 Here’s the design you’ll be implementing: **[Figma prototype](https://www.figma.com/proto/AwC58Mqda2ZOjqzadPdiso/LES---Front-end-homework?page-id=&node-id=1-4741&p=f&t=Dx21H0F2ytviGHvl-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A4741)**
@@ -14,31 +10,19 @@ All the available material can be found from this link: **[Figma components](htt
 
 The password will be provided to you by email.
 
-### Code
+## Features
 
-You'll be given a backend with a search endpoint to handle server-side operations and a minimal frontend that you'll enhance.
+- Search through notifications with debounced input
+- Matches the figma design with clean UI
+- Test coverage
+- Type-safe with strict TypeScript types
 
-What we expect from you:
+## Tech Stack
 
-- Ensure the frontend nicely matches the Figma design.
-- Create any necessary components and feel free to restructure the file architecture.
-- Improve the Typescript types, so they are strictier & helpful.
-- 🎁 **Bonus:** Add code quality tools (linting, formatting).
-- 🎁 **Bonus:** A GitHub Action to automate code quality checks.
-- 🎁 **Bonus:** Any other cool improvements you can think of!
-
-> [!NOTE]
-> We've **intentionally left some bugs/issues in the code**—happy debugging! 🥳
-
-## Getting Started
-
-1. Fork and clone this repository.
-2. Complete the homework.
-3. Commit as many times as needed.
-4. Push your work to your fork.
-5. Submit your fork URL as the deliverable. 🚀
-
-We hope you enjoy the challenge! 💪
+- React 19
+- TypeScript
+- Tailwind CSS
+- Vite
 
 ### Running the Backend
 
@@ -53,9 +37,27 @@ docker run -p 5000:5000 vault-front-homework:latest
 ### Running the frontend
 
 ```
-# install dependencies
+# Install dependencies
 pnpm install
 
-# run the dev server
+# Start the development server
 pnpm dev
+
+# Run tests
+pnpm test
+
+# Run the linter
+pnpm lint
+
+# Format code
+pnpm format
 ```
+
+### Future improvements
+
+- Add pagination for larger datasets
+- Add more advanced filtering options
+- Implement notification grouping by date
+- All test coverage
+- Caching formatted notification data
+- Light/dark mode support
