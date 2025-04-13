@@ -13,7 +13,7 @@ const NotificationList: React.FC<NotificationListProps> = memo(({ notifications 
   return (
     <div className="flex flex-col" aria-label="Transaction history">
       {notifications.map((notification) => (
-        <NotificationItem key={notification.id} />
+        <NotificationItem key={notification.id} notification={notification} />
       ))}
     </div>
   );
